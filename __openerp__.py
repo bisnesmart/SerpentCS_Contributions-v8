@@ -29,11 +29,11 @@
     'depends': ['web'],
     "description": """
         This module provides the functionality to store digital signature image for a record.
-        The example can be seen into the User's form view where we have added a test field under signature.
+        The example can be seen into the projects form view where we have added a test field under signature.
     """,
     'data': [
         'views/we_digital_sign_view.xml',
-        'users_view.xml'
+        'projects_view.xml'
     ],
     'website': 'http://www.serpentcs.com',
     'qweb': ['static/src/xml/digital_sign.xml'],
