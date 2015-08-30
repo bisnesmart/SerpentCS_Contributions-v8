@@ -22,10 +22,12 @@
 
 from openerp import models, fields, api
 
-class Users(models.Model):
-    _name = 'res.users'
-    _inherit = 'res.users'
+class Projects(models.Model):
+    _inherit = 'project.project'
 
-    signature_image= fields.Binary(string='Signature')
+    signature_image_customer= fields.Binary(string='Signature Customer')
+    signature_image_responsible= fields.Binary(string='Signature Responsible')
+    signature_image_technician= fields.Binary(string='Signature Technician')
+
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

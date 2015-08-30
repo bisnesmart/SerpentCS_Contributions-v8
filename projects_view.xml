@@ -1,18 +1,26 @@
 <?xml version="1.0" ?>
 <openerp>
-	<data>
-
-		<record id="inherited_project_form" model="ir.ui.view">
-            <field name="name">inherited.projects.form</field>
-            <field name="model">projects</field>
-            <field name="inherit_id" ref="projects"/>
+    <data>
+        <record id="edit_project" model="ir.ui.view">
+            <field name="name">project.project.form.inherit</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.edit_project"/>
             <field name="arch" type="xml">
-            	<xpath expr="//field[@name='alias_contact']" position="replace">
-					<label for="signature_image" class="oe_edit_only"/>
-					<h2><field name="signature_image" widget="signature"/></h2>
-				</xpath>
+
+            <notebook position="inside">
+                <page string="signatures" >
+                    <group colspan="4">
+                    <label for="signature_image_customer" />
+                    <h2><field name="signature_image_customer" widget="signature"/></h2>
+                    <label for="signature_image_responsible"/>
+                    <h2><field name="signature_image_responsible" widget="signature"/></h2>
+                    <label for="signature_image_technician"/>
+                    <h2><field name="signature_image_technician" widget="signature"/></h2>
+                    </group>
+                </page>
+            </notebook>
             </field>
         </record>
 
-	</data>
+    </data>
 </openerp>
